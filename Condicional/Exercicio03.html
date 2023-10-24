@@ -1,0 +1,70 @@
+<!--
+    Altere o exercício 2 para que seja solicitada a nota de recuperação, 
+    somente se o aluno tiver ficado em recuperação. 
+    Em seguida, o programa deve verificar se essa nota da recuperação é maior ou igual a 50. 
+    Se for, o programa deve mostrar a mensagem "APROVADO, 
+    caso contrário deve mostrar a mensagem "REPROVADO".
+-->
+
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+
+    <script type="text/javascript">
+        function CalcularNota(){
+            var nome = document.getElementById("nome").value;
+            var nota1 = document.getElementById("nota1").value;
+            var nota2 = document.getElementById("nota2").value;
+            
+            var media = (parseFloat(nota1) + parseFloat(nota2)) / 2;
+
+            if(media >= 60){
+                alert(nome + ' você foi Aprovado!');
+            }
+            else
+            {
+                alert(nome + ' você está de recuperação!');
+
+                var divRecuperacao = document.getElementById("recuperacao");
+                divRecuperacao.style.display = "block";
+            }
+        }
+
+        function CalcularRecupecao(){
+            var nome = document.getElementById("nome").value;
+            var notaRecuperacao = parseFloat(document.getElementById("notaRecuperacao").value);
+
+            if(notaRecuperacao >= 50)
+            {
+                alert(nome + " você foi Aprovado!");
+            }
+            else{
+                alert(nome + "você foi Reprovado!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>Nome:</label>
+    <input type="text" id="nome"/>
+    <br/>
+    <label>Nota 01</label>
+    <input type="number" id="nota1"/>
+    <br/>
+    <label>Nota 02</label>
+    <input type="number" id="nota2"/>
+    <br/>
+    <button onclick="CalcularNota()">Calcular a média</button>
+
+    <br/>
+    <br />
+    <div id="recuperacao" style="display: none;">
+        <label>Nota da recuperação</label>
+        <input type="number" id="notaRecuperacao"/>
+        <button onclick="CalcularRecupecao()">Calcular a recuperação</button>
+    </div>
+</body>
+</html>

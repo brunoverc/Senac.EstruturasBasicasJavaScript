@@ -1,0 +1,42 @@
+<!--2. Crie um programa que solicite o nome, a nota 1 e a nota 2 de um aluno. 
+    Em seguida o programa deve calcular a média aritmética e, se o aluno ficar 
+    com nota maior ou igual a 60, o programa deve mostrar a mensagem "APROVADO". 
+    Se a nota for menor que 60 o programa deve apresentar a mensagem "Em Recuperação"-->
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+
+    <script type="text/javascript">
+        function CalcularNota(){
+            var nome = document.getElementById("nome").value;
+            var nota1 = document.getElementById("nota1").value;
+            var nota2 = document.getElementById("nota2").value;
+            
+            var media = (parseFloat(nota1) + parseFloat(nota2)) / 2;
+
+            if(media >= 60){
+                alert(nome + ' você foi Aprovado!');
+            }
+            else
+            {
+                alert(nome + ' você está de recuperação!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>Nome:</label>
+    <input type="text" id="nome"/>
+    <br/>
+    <label>Nota 01</label>
+    <input type="number" id="nota1"/>
+    <br/>
+    <label>Nota 02</label>
+    <input type="number" id="nota2"/>
+    <br/>
+    <button onclick="CalcularNota()">Calcular a média</button>
+</body>
+</html>
