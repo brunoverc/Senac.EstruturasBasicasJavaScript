@@ -14,8 +14,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 06</title>
+    <script type="text/javascript">
+        function CalcularCombustivel(){
+            var gasolina = parseFloat(document.getElementById("valorGasolina").value);
+            var etanol = parseFloat(document.getElementById("valorEtanol").value);
+
+            var resultado = etanol / gasolina;
+            
+            if(resultado >= 0.7)
+            {
+                alert('Compensa abastecer com gasolina');
+            }
+            else
+            {
+                alert('Compensa abastecer com etanol');
+            }
+        }
+    </script>
 </head>
 <body>
-    
+    <label>Valor da Gasolina:</label>
+    <input type="text" id="valorGasolina"/>
+    <br/>
+    <label>Valor do Etanol:</label>
+    <input type="text" id="valorEtanol"/>
+    <br/>
+    <button onclick="CalcularCombustivel()">Calcular</button>
 </body>
 </html>
