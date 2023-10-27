@@ -16,7 +16,7 @@
         function verificarFila(){
             var atendimentoPreferencial = document.getElementById("atendimentoPreferencial").value;
 
-            if(atendimentoPreferencial === 'sim' || atendimentoPreferencial === 'SIM')
+            if(atendimentoPreferencial.toUpperCase() === 'SIM')
             {
                 alert('Vá para os caixas 1, 2 e 3');
             }
