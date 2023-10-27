@@ -1,0 +1,35 @@
+<!--2. Crie um programa que solicite uma letra ao usuário e diga se é uma vogal ou não vogal.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+    <script type="text/javascript">
+        function VerificaLetra() {
+            var letra = document.getElementById("letra").value;
+
+            switch (letra) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    alert('É uma vogal!');
+                    break;
+                default:
+                    alert("É uma consoante!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <label>Digite a letra</label>
+    <input type="text" id="letra"/>
+    <br/>
+    <button onclick="VerificaLetra()">Verificar a letra</button>
+</body>
+
+</html>

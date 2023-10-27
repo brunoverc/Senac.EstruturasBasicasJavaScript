@@ -1,0 +1,26 @@
+<!--
+    1. Crie um programa que solicite 5 números e apresente na tela a soma de todos os números.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+    <script type="text/javascript">
+        function SomaNumeros(){
+            var num = 0;
+
+            for(let i = 1; i <= 5; i++)
+            {
+                num += parseInt(prompt('Digite um número (' + i + ')'));
+            }
+
+            alert('O resultado foi: ' + num);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="SomaNumeros()">Aperte aqui para iniciar</button>
+</body>

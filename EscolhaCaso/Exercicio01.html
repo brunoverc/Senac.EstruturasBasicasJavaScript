@@ -1,0 +1,65 @@
+<!--1. Crie um programa que solicite ao usuário um número entre 1 e 12 e apresente na tela o mês correspondente.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+    <script type="text/javascript">
+        function VerificaMes() {
+            var mes = parseInt(document.getElementById("numeroMes").value);
+
+            switch (mes) {
+                case 1:
+                    alert("Janeiro");
+                    break;
+                case 2:
+                    alert("Fevereiro");
+                    break;
+                case 3:
+                    alert("Março");
+                    break;
+                case 4:
+                    alert("Abril");
+                    break;
+                case 5:
+                    alert("Maio");
+                    break;
+                case 6:
+                    alert("Junho");
+                    break;
+                case 7:
+                    alert("Julho");
+                    break;
+                case 8:
+                    alert("Agosto");
+                    break;
+                case 9:
+                    alert("Setembro");
+                    break;
+                case 10:
+                    alert("Outubro");
+                    break;
+                case 11:
+                    alert("Novembro");
+                    break;
+                case 12:
+                    alert("Dezembro");
+                    break;
+                default:
+                    alert("Mês inválido!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <label>Digite o número do mês: </label>
+    <input type="number" id="numeroMes" />
+    <br />
+    <button onclick="VerificaMes()">Verificar mês</button>
+</body>
+
+</html>

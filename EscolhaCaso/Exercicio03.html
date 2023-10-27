@@ -1,0 +1,43 @@
+<!--
+3. Crie um programa que solicite o tamanho de uma blusa (P, M e G) e apresente o tamanho da blusa solicitada 
+P: 0.46 x 0.55
+M: 0.51 x 0.56
+G: 0.52 x 0.58
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+    <script type="text/javascript">
+        function MostrarTamanhoBlusa() {
+            var tamanho = document.getElementById("tamanhoBlusa").value;
+
+            switch (tamanho) {
+                case 'P':
+                    alert('0.46 x 0.55');
+                    break;
+                case 'M':
+                    alert('0.51 x 0.56');
+                    break;
+                case 'G':
+                    alert('0.52 x 0.58');
+                    break;
+                default:
+                    alert('Código inválido');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <label>Digite o tamanho da blusa (P, M ou G)</label>
+    <input type="text" id="tamanhoBlusa"/>
+    <br/>
+    <button onclick="MostrarTamanhoBlusa()">Mostrar o tamanho da blusa</button>
+</body>
+
+</html>
