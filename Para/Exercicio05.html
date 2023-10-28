@@ -1,2 +1,45 @@
+<!--
+5. Crie um programa que solicite ao usuário o número de bolinhas de gude que estão em 
+    um pote de vidro.
+Se o número digitado for igual ao número gerado aleatóriamente, apresente a mensagem "Parabéns, você acertou".
+Se o número digitado for menor ao número gerado aleatóriamente, apresente a mensagem: "Você errou! Existem mais 
+    bolinhas do que você digitou"
+Se o número digitado for maior ao número gerado aleatóriamente, apresente a mensagem "Você errou! Existem menos 
+    bolinhas do que você digitou."
+O programa deve dar 5 oportunidades para que o usuário tente acertar a quantidade correta de 
+    bolinhas.
+-->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+
+    <script type="text/javascript">
+        function VerificaBolinhas(){
+            var numBolinhas = parseInt(Math.random() * 100);
+
+            for(let i = 0; i < 5; i++){
+                var chute = parseInt(prompt("Quantas bolinhas existem no pote?"));
+
+                if(chute < numBolinhas){
+                    alert('Você errou! Existem mais bolinhas do que você digitou');
+                }
+                else if(chute > numBolinhas){
+                    alert('Você errou! Existem menos bolinhas do que você digitou.');
+                }
+                else{
+                    alert('Parabéns, você acertou!');
+                    break;
+                }
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="VerificaBolinhas()">Aperte aqui para iniciar</button>
+</body>
 </html>

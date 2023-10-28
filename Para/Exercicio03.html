@@ -1,0 +1,29 @@
+<!--3. Crie um programa para ler a altura de 12 atletas de basquete. 
+    Apresente no final quantos têm mais de 1.90.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+
+    <script type="text/javascript">
+        function AlturaAtletas(){
+            var contador = 0;
+            for(let i = 1; i <= 12; i++){
+                var altura = parseFloat(prompt("Digite a altura do atleta: " + i));
+
+                if(altura > 1.90)
+                {
+                    contador++;
+                }
+            }
+
+            alert(contador + ' atletas tem mais de 1.90');
+        }
+    </script>
+</head>
+<body>
+    <button onclick="AlturaAtletas()">Aperte aqui para iniciar</button>
+</body>
+</html>

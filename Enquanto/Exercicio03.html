@@ -1,0 +1,46 @@
+<!--
+3. Altere o exercício 5 da lista anterior (Lista de exercícios - Para) para que sejam 
+    dadas N oportunidades para o usuário acerte o número de bolinhas.
+Ele poderá tentar até acertar e deve ser exibido quantas tentativas foram necessárias para
+o acerto.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+
+    <script type="text/javascript">
+        function VerificaBolinhas(){
+            var numBolinhas = parseInt(Math.random() * 100);
+            var chute = -1;
+            var contador = 0;
+            while(chute != numBolinhas){
+                contador++;
+                chute = parseInt(prompt("Quantas bolinhas existem no pote?"));
+
+                if(chute < numBolinhas){
+                    alert('Você errou! Existem mais bolinhas do que você digitou');
+                }
+                else if(chute > numBolinhas){
+                    alert('Você errou! Existem menos bolinhas do que você digitou.');
+                }
+                else{
+                    alert('Parabéns, você acertou! foram necessários ' + contador + 
+                    ' tentativas para acertar a quantidade');
+                    break;
+                }
+                
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="VerificaBolinhas()">Aperte aqui para iniciar</button>
+</body>
+
+</html>

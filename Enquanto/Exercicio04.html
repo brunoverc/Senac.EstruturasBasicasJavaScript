@@ -1,0 +1,50 @@
+<!--
+4. Faça um programa usando a estrutura “enquanto” que leia a idade de
+    várias pessoas. 
+A cada laço, você deverá perguntar para o usuário se ele quer ou não continuar a digitar dados. 
+No final, quando o usuário decidir parar, mostre na tela:
+
+ a) Quantas idades foram digitadas
+ b) Qual é a média entre as idades digitadas
+ c) Quantas pessoas tem 21 anos ou mais.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+
+    <script type="text/javascript">
+        function VerificaIdades() {
+            var continuar = 'S';
+            var quantidadeIdades = 0;
+            var somaIdades = 0;
+            var quantidadeMaior21 = 0;
+
+            while(continuar.toUpperCase() == "S"){
+                var idade = parseInt(prompt("Digite a idade:"));
+
+                quantidadeIdades++;
+                somaIdades += idade;
+                if(idade >= 21){
+                    quantidadeMaior21++;
+                }
+
+                continuar = prompt("Deseja continuar a informas as idades? Digite S ou N");
+            }
+
+            alert("Foram informadas: " + quantidadeIdades + " idades");
+            alert("A média das idades foi: " + (somaIdades / quantidadeIdades) + " anos");
+            alert(quantidadeMaior21 + " pessoas tem 21 anos ou mais");
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="VerificaIdades()">Aperte aqui para iniciar</button>
+</body>
+
+</html>

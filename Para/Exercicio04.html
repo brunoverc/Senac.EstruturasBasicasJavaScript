@@ -1,0 +1,52 @@
+<!--4. Crie um programa para ler a nota de 10 alunos de uma turma de lógica de programação.
+Apresente no final da leitura a maior nota, a menor nota e a média das notas.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+
+    <script type="text/javascript">
+        function NotasAlunos() {
+            var maiorNota = 0;
+            var menorNota = 0;
+            var totalNotas = 0;
+
+            for (let i = 0; i < 10; i++) {
+                var nota = parseFloat(prompt("Digite a nota do aluno " + i));
+
+                if(i == 0){
+                    maiorNota = nota;
+                    menorNota = nota;
+                }
+                else
+                {
+                    if(maiorNota < nota)
+                    {
+                        maiorNota = nota;
+                    }
+                    if(menorNota > nota)
+                    {
+                        menorNota = nota;
+                    }
+                }
+
+                totalNotas += nota;
+            }
+
+            alert('A maior nota foi: ' + maiorNota);
+            alert('A menor nota foi: ' + menorNota);
+            alert('A média das notas foi: ' + (totalNotas / 10));
+
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="NotasAlunos()">Aperte aqui para iniciar</button>
+</body>
+
+</html>

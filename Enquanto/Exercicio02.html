@@ -1,0 +1,68 @@
+<!--
+2. Crie um programa para ler o nome e a velocidade da volta de N pilotos em uma 
+    pista de kart.
+Ao final do programa, você deve apresentar o nome do piloto com a volta mais rápida,
+    o nome do piloto com a volta mais lenta e a média das voltas de todos os pilotos.
+A cada inserção de tempo, pergunte ao usuário se quer continuar informando.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+
+    <script type="text/javascript">
+        function VerificaTempoPilotos() {
+            var continuar= "s";
+            var nomePilotoMaisRapido = "";
+            var nomePilotoMaisLento = "";
+            var tempoPilotoMaisRapido = 0;
+            var tempoPilotoMaisLento = 0;
+            var totalTempoPilotos = 0;
+            var contador = 0;
+
+            while(continuar.toUpperCase() == "S")
+            {
+                var nome = prompt("Digite o nome do piloto:")
+                var tempoPiloto = parseFloat(prompt("Digite o tempo do piloto: " + nome));
+
+                if(contador == 0)
+                {
+                    nomePilotoMaisRapido = nome;
+                    nomePilotoMaisLento = nome;
+                    tempoPilotoMaisRapido = tempoPiloto;
+                    tempoPilotoMaisLento = tempoPiloto;
+                }
+                else
+                {
+                    if(tempoPilotoMaisLento > tempoPiloto)
+                    {
+                        tempoPilotoMaisRapido = tempoPiloto;
+                        nomePilotoMaisRapido = nome;
+                    }
+                    if(tempoPilotoMaisLento < tempoPiloto)
+                    {
+                        tempoPilotoMaisLento = tempoPiloto;
+                        nomePilotoMaisLento = nome;
+                    }
+                }
+
+                totalTempoPilotos += tempoPiloto;
+                continuar = prompt("Deseja continuar, digite S para sim e N para não");
+                contador++;
+            }
+
+            alert("O piloto mais lento foi: " + nomePilotoMaisLento);
+            alert("O piloto mais rápido foi: " + nomePilotoMaisRapido);
+            alert("A média de tempo dos pilotos foi: " + (totalTempoPilotos / contador));
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="VerificaTempoPilotos()">Aperte aqui para iniciar</button>
+</body>
+
+</html>

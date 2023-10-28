@@ -1,0 +1,55 @@
+<!--
+5. Crie um programa usando a estrutura “enquanto” que leia vários números. 
+A cada laço, pergunte se o usuário quer continuar ou não. 
+No final, mostre na tela: 
+
+a) O somatório entre todos os valores 
+b) Qual foi o menor valor digitado 
+c) A média entre todos os valores 
+d) Quantos valores são pares
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+
+    <script type="text/javascript">
+        function VerificaNumeros() {
+            var continuar = 'S';
+            var somatorio = 0;
+            var menorValorDigitado = 0;
+            var quantidadePares = 0;
+            var contador = 0;
+
+            while (continuar.toUpperCase() == "S") {
+                var numero = parseInt(prompt("Digite o número:"));
+
+                somatorio += numero;
+                if (contador == 0 || menorValorDigitado > numero) {
+                    menorValorDigitado = numero
+                }
+
+                if(numero % 2 == 0)
+                {
+                    quantidadePares++;
+                }
+                contador++;
+                continuar = prompt("Deseja continuar a informas os números? Digite S ou N");
+            }
+
+            alert("O somatório dos números foi: " + somatorio);
+            alert("O menor valor digitado foi: " + menorValorDigitado);
+            alert("A quantidade de números pares informada foi: " + quantidadePares);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="VerificaNumeros()">Aperte aqui para iniciar</button>
+</body>
+
+</html>
